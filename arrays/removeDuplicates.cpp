@@ -22,7 +22,7 @@
  * Returns 5, and modifies nums to [0, 1, 2, 3, 4, _, _, _, _, _]  
  * (The underscores denote irrelevant values.)
  * 
- * @author 
+ * @author Agustín Coitinho
  * @date 2025
  */
 
