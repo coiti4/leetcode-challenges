@@ -40,30 +40,24 @@ public:
     int removeDuplicates(vector<int>& nums) {
         // n represents the effective size of the vector
         uint16_t n = nums.size();
-        uint16_t i = 0;
-        uint16_t j;
+        uint16_t wr = 2;
+        uint16_t rd = 2;
         
         // If the vector has 2 or fewer elements, it already meets the condition.
         if (n <= 2)
             return n;
         
-        // Iterate over the vector while at least 3 elements are available for comparison.
-        while (i < n - 2) {
-            // If three consecutive identical elements are detected...
-            if (nums[i] == nums[i+1] && nums[i+1] == nums[i+2]) {
-                // Shift all subsequent elements to the left, starting from position i+2.
-                for (j = i + 2; j < n - 1; j++) {
-                    nums[j] = nums[j + 1];
-                }
-                // Decrease the effective size of the vector.
-                n--;
+        while (rd < n){
+            if (nums[wr-2] == nums[rd]){
+                rd++;
             } else {
-                // If no three consecutive duplicates are found, move to the next element.
-                i++;
+                nums[wr] = nums[rd];
+                wr++;
+                rd++;
             }
         }
         
-        return n;
+        return wr;
     }
 };
 
