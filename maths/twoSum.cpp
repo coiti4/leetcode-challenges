@@ -1,5 +1,5 @@
 /**
- * @file twoSumOptimized.cpp
+ * @file twoSum.cpp
  * @brief Optimized O(n) Implementation of the Two Sum Problem.
  * 
  * This file contains an optimized solution for the Two Sum problem using an 
