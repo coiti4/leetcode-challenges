@@ -15,7 +15,7 @@
  * The algorithm uses an unordered_map to store each number and its index as you 
  * iterate through the array, achieving O(n) time complexity.
  * 
- * @author 
+ * @author Agustin Coitinho
  * @date 2025
  */
 
