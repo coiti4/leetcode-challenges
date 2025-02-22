@@ -50,18 +50,18 @@ public:
         else if (list2 == nullptr)
             return list1;
         
-        ListNode* dummy = new ListNode(); // dummy -> nullptr
+        ListNode* dummy = new ListNode(); // dummy -> nullptr. Useful to keep track on the initial node.
         ListNode* current = dummy; // current -> dummy
 
-        while (list1 && list2){
+        while (list1 && list2){ 
             if (list1->val <= list2->val){
-                current->next = list1;
-                list1 = list1->next;
+                current->next = list1; // links list1
+                list1 = list1->next;   // advances list1
             } else {
-                current->next = list2;
-                list2 = list2->next;
+                current->next = list2; // links list2
+                list2 = list2->next;   // advances list2
             }
-            current = current->next;
+            current = current->next; // advances current
         }
 
         if (list1){
