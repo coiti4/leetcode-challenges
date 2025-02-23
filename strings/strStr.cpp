@@ -1,6 +1,6 @@
 /**
  * @file strStr.cpp
- * @brief Implements strStr() to find the first occurrence of a substring in a string.
+ * @brief Implements strStr() to find the first occurrence of a substring in a string. Naive implementation O(m*n).
  *
  * This file contains a solution for LeetCode problem 28: Implement strStr().
  * The function takes two strings: 'haystack' (the string to search in) and 'needle'
@@ -33,8 +33,8 @@ public:
         if (needle.size() > haystack.size()) 
             return -1;
 
-        int i = 0;  // index for needle
-        int j = 0;  // index for haystack
+        uint16_t i = 0;  // index for needle
+        uint16_t j = 0;  // index for haystack
 
         while (needle[i] != '\0') {
             if (needle[i] == haystack[j]) {
